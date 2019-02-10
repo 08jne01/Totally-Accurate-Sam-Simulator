@@ -60,7 +60,7 @@
     <ClCompile Include="glad.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="projectile.cpp">
+    <ClCompile Include="Projectile.cpp">
       <Filter>Source Files\Entities</Filter>
     </ClCompile>
   </ItemGroup>
@@ -80,7 +80,7 @@
     <ClInclude Include="Camera.h">
       <Filter>Header Files\Entites</Filter>
     </ClInclude>
-    <ClInclude Include="projectile.h">
+    <ClInclude Include="Projectile.h">
       <Filter>Header Files\Entites</Filter>
     </ClInclude>
   </ItemGroup>
