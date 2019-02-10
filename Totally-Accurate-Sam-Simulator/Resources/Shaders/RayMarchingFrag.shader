@@ -13,6 +13,9 @@ uniform vec2 res;
 uniform mat4 cam_rot;
 uniform mat4 cam_trans;
 
+uniform	vec3 pos;
+//uniform mat4 dir;
+
 mat4 rotationMatrix(vec3 axis, float angle)
 
 {
@@ -76,7 +79,8 @@ vec4 GetDist(vec3 p)
 
 {
 	float d = plane(p + vec3(0., 0.0, 0.), vec4(0, 1, 0, 0.0));
-	float s = box(p, vec3(1.0, 5.0, 1.0), vec3(0.0, 5.0, 0.0));
+
+	float s = box(p, vec3(1.0, 5.0, 1.0), pos);
 	vec3 color = vec3(0.5, 1.0, 0.5);
 
 	if (d < s)

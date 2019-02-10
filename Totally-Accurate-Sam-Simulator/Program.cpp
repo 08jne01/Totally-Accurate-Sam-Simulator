@@ -118,6 +118,10 @@ int Program::mainLoop()
 		glm::mat4 transMat = makeTransMatrix(camera);
 		glUniformMatrix4fv(trans, 1, GL_FALSE, &transMat[0][0]);
 
+		int pos = glGetUniformLocation(shaderProgram, "pos");
+		glm::vec3 positionVec(10., 5.0, 0.0);
+		glUniform3f(pos,positionVec.x, positionVec.y, positionVec.z);
+
 		glUseProgram(shaderProgram);
 		glBindVertexArray(VAO);
 		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
