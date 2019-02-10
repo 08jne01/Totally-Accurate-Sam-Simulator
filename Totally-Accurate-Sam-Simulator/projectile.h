@@ -1,6 +1,4 @@
-#pragma once
 #include <glm/ext.hpp>
-#include <iostream>
 
 class Projectile
 {

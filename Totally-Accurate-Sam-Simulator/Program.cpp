@@ -96,14 +96,11 @@ int Program::mainLoop()
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 	glBindVertexArray(0);
 
-	Projectile projectile;
-
 	while (!glfwWindowShouldClose(window))
 
 	{
 		camera.update();
 		eventHandler.update();
-		projectile.update();
 
 		glClear(GL_COLOR_BUFFER_BIT);
 
@@ -122,7 +119,7 @@ int Program::mainLoop()
 		glUniformMatrix4fv(trans, 1, GL_FALSE, &transMat[0][0]);
 
 		int pos = glGetUniformLocation(shaderProgram, "pos");
-		glm::vec3 positionVec = projectile.getPosition();
+		glm::vec3 positionVec(10., 5.0, 0.0);
 		glUniform3f(pos,positionVec.x, positionVec.y, positionVec.z);
 
 		glUseProgram(shaderProgram);
