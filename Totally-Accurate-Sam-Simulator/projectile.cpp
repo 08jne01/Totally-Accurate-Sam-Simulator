@@ -1,15 +1,23 @@
 #include "Projectile.h"
 
-Projectile::Projectile() : position(10.0, 10.0, 10.0), velocity(12.0, 1000.0, 0.0), gravity(0.0, -100, 0.0), mass(3.0), timeStp(0.01), direction(0.0, 1.0, 0.0)
+Projectile::Projectile() : position(10.0, 10.0, 10.0), velocity(12.0, 1000.0, 0.0), gravity(0.0, -9.81, 0.0), mass(3.0), timeStp(0.1), direction(0.0, 1.0, 0.0), acceleration(0.0)
 {
 	
 }
 
 void Projectile::update()
 {
+	
+	velocity += 0.5f*timeStp*acceleration;
 	acceleration = gravity + forceDrag() / (float)mass;
-	velocity += acceleration * timeStp;
-	position += velocity * timeStp;
+	velocity += 0.5f*timeStp*acceleration;
+	position += timeStp * velocity + 0.5f*timeStp*timeStp*acceleration;
+
+
+
+	//acceleration = gravity + forceDrag() / (float)mass;
+	//velocity += acceleration * timeStp;
+	//position += velocity * timeStp;
 
 	
 

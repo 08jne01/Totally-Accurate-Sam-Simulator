@@ -11,7 +11,7 @@ class Projectile
 		void update();
 		
 	private:
-		glm::vec3 position, direction, velocity, acceleration, gravity, forceDrag();
+		glm::vec3 position, direction, velocity, acceleration, gravity, forceDrag(), accleration;
 		double mass;
 		float timeStp;
 };
