@@ -58,6 +58,9 @@ artifacts/
 StyleCopReport.xml
 
 # Files built by Visual Studio
+*.vcxproj.user
+*.vcxproj
+*.vcxproj.filters
 *_i.c
 *_p.c
 *_i.h

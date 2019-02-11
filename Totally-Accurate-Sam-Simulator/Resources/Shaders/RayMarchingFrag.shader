@@ -1,6 +1,6 @@
 #version 460 core
 #define MAX_STEPS 2000
-#define MAX_DIST 5000.
+#define MAX_DIST 10000.
 #define SURF_DIST .001
 #define PI 3.14159
 
@@ -78,9 +78,23 @@ float cubeCross(vec3 p, vec4 n, float t)
 vec4 GetDist(vec3 p)
 
 {
+
+	//vec3 n1 = normalize(vec3(2.0, 1.0, 0.0));
+	//p -= 2.0*min(0.0, dot(p, n1))*n1;
+
 	float d = plane(p + vec3(0., 0.0, 0.), vec4(0, 1, 0, 0.0));
 
-	float s = box(p, vec3(1.0, 5.0, 1.0), pos);
+	
+
+	//p.xz = mod(p.xz, 20.0);
+
+	//newPos.xz = mod(newPos.xz, 20.0);
+
+	
+
+	//vec3 n2 = vec3(0.0, )
+
+	float s = box(p, vec3(0.5, 5.0, 0.5), pos);
 	vec3 color = vec3(0.5, 1.0, 0.5);
 
 	if (d < s)
