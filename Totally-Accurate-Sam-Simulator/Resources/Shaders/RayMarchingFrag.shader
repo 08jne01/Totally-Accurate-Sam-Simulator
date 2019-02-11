@@ -83,8 +83,8 @@ vec4 GetDist(vec3 p)
 	//p -= 2.0*min(0.0, dot(p, n1))*n1;
 
 	float d = plane(p + vec3(0., 0.0, 0.), vec4(0, 1, 0, 0.0));
-
-	
+	//									x	y	z		radius
+	float terjeSphere = sphere(p, vec3(10., 10., 10., 1.0))
 
 	//p.xz = mod(p.xz, 20.0);
 
@@ -103,7 +103,7 @@ vec4 GetDist(vec3 p)
 		color = vec3(1.0);
 	}
 
-	return vec4(color, min(s,d));
+	return vec4(color, min(min(s,d),terjeSphere));
 }
 
 vec3 RayMarch(vec3 ro, vec3 rd)
