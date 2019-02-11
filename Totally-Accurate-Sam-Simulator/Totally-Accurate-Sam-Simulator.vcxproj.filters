@@ -63,6 +63,9 @@
     <ClCompile Include="Projectile.cpp">
       <Filter>Source Files\Entities</Filter>
     </ClCompile>
+    <ClCompile Include="Missile.cpp">
+      <Filter>Source Files\Entities</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Program.h">
@@ -81,6 +84,9 @@
       <Filter>Header Files\Entites</Filter>
     </ClInclude>
     <ClInclude Include="Projectile.h">
+      <Filter>Header Files\Entites</Filter>
+    </ClInclude>
+    <ClInclude Include="Missile.h">
       <Filter>Header Files\Entites</Filter>
     </ClInclude>
   </ItemGroup>
